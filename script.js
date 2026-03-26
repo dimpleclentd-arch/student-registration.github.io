@@ -1,4 +1,5 @@
 const form = document.getElementById("form");
+
 const name = document.getElementById("name");
 const section = document.getElementById("section");
 const course = document.getElementById("course");
@@ -24,10 +25,23 @@ form.addEventListener("submit", (event) => {
     }
 
     preview.innerHTML =
-    "Student Name: " + nameValue +
-    "<br>Section: " + sectionValue +
-    "<br>Course: " + courseValue +
-    "<br>Email: " + emailValue +
-    "<br>Year Level: " + yearValue;
+        "<h2>Student Information Preview</h2>" +
+        "<p>Student Name: " + nameValue + "</p>" +
+        "<p>Section: " + sectionValue + "</p>" +
+        "<p>Course: " + courseValue + "</p>" +
+        "<p>Email: " + emailValue + "</p>" +
+        "<p>Year Level: " + yearValue + "</p>";
+
+});
+
+clearBtn.addEventListener("click", () => {
+
+    name.value = "";
+    section.value = "";
+    course.value = "";
+    email.value = "";
+    year.value = "";
+
+    preview.innerHTML = "<h2>Student Information Preview</h2>";
 
 });
