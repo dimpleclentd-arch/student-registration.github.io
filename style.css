@@ -43,3 +43,9 @@ button:hover {
     border: 1px solid pink;
     background-color: white;
 }
+
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
